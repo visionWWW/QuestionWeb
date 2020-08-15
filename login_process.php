@@ -12,7 +12,7 @@
       $_SESSION['uid']=$uid;
       ?>
       <script>
-        location.replace("./index.html");
+        location.replace("./index.php");
       </script>
 <?php
     }
