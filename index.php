@@ -19,8 +19,9 @@
 
       <ul class="menu">
         <?php
+        session_start();
           if(isset($_SESSION['uid'])){
-            echo $_SESSION['uid']."님";
+            echo "<a href='./logout.php'>".$_SESSION['uid']."</a>님";
           } else{
          ?>
           <a href="./login.html">Login</a>
