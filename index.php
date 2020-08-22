@@ -11,7 +11,7 @@
   <body>
 
     <div class="header">
-      <h2 class="logo">Question Web</h2>
+      <h2 class="logo"><a href="index.html">Question Web</a></h2>
       <input type="checkbox" id="chk">
       <label for="chk" class="show-menu-btn">
         <i class="fa fa-ellipsis-h"></i>
