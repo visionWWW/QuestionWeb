@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="with=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style.css">
+  </head>
+  <body>
+
+    <div class="header">
+      <h2 class="logo"><a href="index.html">Question Web</a></h2>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fa fa-ellipsis-h"></i>
+      </label>
+
+      <ul class="menu">
+        <a href="home.html">Home</a>
+        <a href="question.html">Question</a>
+        <a href="free.html">Free</a>
+        <label for="chk"  class="hide-menu-btn">
+          <i class="fa fa-times"></i>
+        </label>
+      </ul>
+    </div>
+    <br><br><br>
+    <center>
+      <h2>회원가입</h2>
+    <form method="POST" action="signup_process.php">
+      <label for="newbie_name"> 이름: </label>
+      <input type="text" name="newbie_name" size="20" id="newbie_name"><br>
+      <label for="newbie_email"> 이메일: </label>
+      <input type="text" name="newbie_email" size="20" id="newbie_email"><br>
+      <label for="newbie_id"> 아이디: </label>
+      <input type="text" name="newbie_id" size="20" id="newbie_id"><br>
+      <label for="newbie_pw">비밀번호: </label>
+      <input type="password" name="newbie_pw" size="20" id="newbie_pw"><br>
+      <label for="newbie_tel"> 전화번호: </label>
+      <input type="text" name="newbie_tel" size="20" id="newbie_tel"><br>
+
+      <input type="submit" value="가입하기"/>
+    </form>
+  </center>
+
+  </body>
+</html>
