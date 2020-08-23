@@ -8,7 +8,7 @@
     $connect = mysqli_connect('localhost', 'root', '3190024jina', 'questionweb');
     $login_query = "SELECT * FROM user WHERE id='$uid' && passwd='$upw'";
     $res=mysqli_fetch_array(mysqli_query($connect,$login_query));
-    if($res['passwd']== $upw){
+    if($res['passwd']=== $upw){
       $_SESSION['uid']=$uid;
       ?>
       <script>
@@ -23,5 +23,4 @@
       </script>
     <?php
     }
-
  ?>
