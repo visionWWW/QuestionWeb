@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  $connect = mysqli_connect('localhost', 'root', '3190024jina', 'questionweb');
+  $show_free = "select * from free order by fnum desc";
+  $result = $connect->query($show_free);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,17 +17,25 @@
   <body>
 
     <div class="header">
-      <h2 class="logo"><a href="index.html">Question Web</a></h2>
+      <h2 class="logo"><a href="index.php">Question Web</a></h2>
       <input type="checkbox" id="chk">
       <label for="chk" class="show-menu-btn">
         <i class="fa fa-ellipsis-h"></i>
       </label>
 
       <ul class="menu">
-
-        <a href="home.html">Home</a>
-        <a href="question.html">Question</a>
-        <a href="free.html">Free</a>
+        <?php
+          if(isset($_SESSION['uid'])){
+            echo "<a href='./logout.php'>".$_SESSION['uid']."</a>님";
+          } else{
+         ?>
+          <a href="./login.html">Login</a>
+        <?php
+       }
+         ?>
+        <a href="index.php">Home</a>
+        <a href="question.php">Question</a>
+        <a href="free.php">Free</a>
         <label for="chk"  class="hide-menu-btn">
           <i class="fa fa-times"></i>
         </label>
@@ -29,12 +43,40 @@
 
 
     </div>
-
+<button type="button" onclick="location.href='posting.php'" style="float: right;">글쓰기</button>
+<br><br><br>
+<h3 style="margin-left:30px">FREE</h3>
     <div class="content">
+      <table border="1">
+        <thead align="center">
+          <tr>
+            <td width="50">번호</td>
+            <td width="500">제목</td>
+            <td width="100">작성자</td>
+            <td width="200">날짜</td>
+            <td width="50">추천</td>
+            <td width="50">조회수</td>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          while($questions = mysqli_fetch_assoc($result)){
+            ?>
+            <tr>
+              <td width="50" align="center"><?php echo $questions['fnum']; ?></td>
+              <td width="500" align="center"><?php echo $questions['title']; ?></td>
+              <td width="100" align="center"><?php echo $questions['writer']; ?></td>
+              <td width="200" align="center"><?php echo $questions['nalzza']; ?></td>
+              <td width="50" align="center"><?php  echo $questions['recommendation']; ?></td>
+              <td width="50" align="center"><?php echo $questions['views']; ?></td>
+            </tr>
+            <?php
+          }
+           ?>
+        </tbody>
 
-      <p>
-        Free sample
-      </p>
+      </table>
+
       </div>
 
   </body>
