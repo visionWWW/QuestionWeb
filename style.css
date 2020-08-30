@@ -61,6 +61,9 @@
 .content p{
   text-align: justify;
 }
+.label{
+  display: block; width: 1000px;
+}
 
 @media screen and (max-width:800px) {
   .show-menu-btn,.hide-menu-btn{
