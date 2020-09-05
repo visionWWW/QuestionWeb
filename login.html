@@ -10,6 +10,37 @@
     <link rel="stylesheet" href="Style.css">
   </head>
 
+  <style>
+    #login_wrapper{
+      border: 20px solid #60a3bc;
+      padding: 5px 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 450px; height: 250px;
+      margin-left: -220px;
+      margin-top: -170px;
+
+      display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+      .form{
+        width: 250px;
+      }
+      .form > div {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 7px;
+        align-items: center;
+      }
+      label{
+        flex: 1px;
+        text-align: left;
+      }
+  </style>
+
   <body>
 
     <div class="header">
@@ -36,23 +67,28 @@
 
       <br><br><br>
 
-      <center>
+        <div id="login_wrapper">
 
-        <h2>로그인이 필요합니다.</h2>
+        <h2>로그인이 필요합니다.</h2><br>
 
-  <form method="POST" action="login_process.php">
-    <label for="user_id"> ID: </label>
-    <input type="text" name="id" size="20" id="user_id"><br>
-    <label for="user_pw">PW: </label>
-    <input type="password" name="pw" size="20" id="user_pw"><br>
-    <input type="submit" value="로그인"/>
-  </form>
-  <span>처음이신가요? <a href="signup.html">회원가입</a></span>
+          <form method="POST" action="login_process.php" class="form">
+            <div>
+            <label for="user_id"> ID: </label>
+            <input type="text" name="id" size="20" id="user_id" style="width:200px;height:20px;font-size:15px;"><br><br>
+            </div>
+            <div>
+            <label for="user_pw">PW: </label>
+            <input type="password" name="pw" size="20" id="user_pw" style="width:200px;height:20px;font-size:15px;"><br><br>
+            </div>
+            <div>
+            <input type="submit" value="로그인"/><br>
+            </div>
 
-  <br>
-</center>
+          </form>
+          <span>처음이신가요? <a href="signup.html">회원가입</a></span>
 
-
+        <br>
+        </div>
 
   </body>
 
