@@ -28,9 +28,9 @@
         <?php
        }
          ?>
-        <a href="home.html">Home</a>
-        <a href="question.html">Question</a>
-        <a href="free.html">Free</a>
+        <a href="index.php">Home</a>
+        <a href="question.php">Question</a>
+        <a href="free.php">Free</a>
         <label for="chk"  class="hide-menu-btn">
           <i class="fa fa-times"></i>
         </label>
