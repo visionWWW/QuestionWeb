@@ -64,7 +64,8 @@
             ?>
             <tr>
               <td width="50" align="center"><?php echo $questions['qnum']; ?></td>
-              <td width="500" align="center"><?php echo $questions['title']; ?></td>
+              <td width="500" align="center"><a href="seeq.php?num=<?php echo $questions['qnum']; ?>">
+                <?php echo $questions['title']; ?></a></td>
               <td width="100" align="center"><?php echo $questions['writer']; ?></td>
               <td width="200" align="center"><?php echo $questions['nalzza']; ?></td>
               <td width="50" align="center"><?php  echo $questions['recommendation']; ?></td>
