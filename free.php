@@ -33,9 +33,9 @@
         <?php
        }
          ?>
-         <a href="index.php">Home</a>
-         <a href="question.php">Question</a>
-         <a href="free.php">Free</a>
+        <a href="index.php">Home</a>
+        <a href="question.php">Question</a>
+        <a href="free.php">Free</a>
         <label for="chk"  class="hide-menu-btn">
           <i class="fa fa-times"></i>
         </label>
@@ -60,15 +60,16 @@
         </thead>
         <tbody>
           <?php
-          while($questions = mysqli_fetch_assoc($result)){
+          while($frees = mysqli_fetch_assoc($result)){
             ?>
             <tr>
-              <td width="50" align="center"><?php echo $questions['fnum']; ?></td>
-              <td width="500" align="center"><?php echo $questions['title']; ?></td>
-              <td width="100" align="center"><?php echo $questions['writer']; ?></td>
-              <td width="200" align="center"><?php echo $questions['nalzza']; ?></td>
-              <td width="50" align="center"><?php  echo $questions['recommendation']; ?></td>
-              <td width="50" align="center"><?php echo $questions['views']; ?></td>
+              <td width="50" align="center"><?php echo $frees['fnum']; ?></td>
+              <td width="500" align="center"><a href="seef.php?num=<?php echo $frees['fnum']; ?>">
+                <?php echo $frees['title']; ?></a></td>
+              <td width="100" align="center"><?php echo $frees['writer']; ?></td>
+              <td width="200" align="center"><?php echo $frees['nalzza']; ?></td>
+              <td width="50" align="center"><?php  echo $frees['recommendation']; ?></td>
+              <td width="50" align="center"><?php echo $frees['views']; ?></td>
             </tr>
             <?php
           }
