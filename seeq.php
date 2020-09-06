@@ -11,6 +11,7 @@
   $connect = mysqli_connect('localhost', 'root', '3190024jina', 'questionweb');
   $see_question = "select * from question where qnum=".$_GET['num'];
   $num = $_GET['num'];
+  $id="guest";
   $result=mysqli_fetch_array(mysqli_query($connect, $see_question));
 ?>
 <!DOCTYPE html>
