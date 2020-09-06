@@ -11,6 +11,7 @@
   $connect = mysqli_connect('localhost', 'root', '3190024jina', 'questionweb');
   $see_free = "select * from free where fnum=".$_GET['num'];
   $num = $_GET['num'];
+  $id="guest";
   $result=mysqli_fetch_array(mysqli_query($connect, $see_free));
 ?>
 <!DOCTYPE html>
