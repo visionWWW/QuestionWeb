@@ -20,6 +20,7 @@
       width: 450px; height: 250px;
       margin-left: -220px;
       margin-top: -170px;
+      color: black;
 
       display: flex;
         flex-direction: column;
@@ -43,14 +44,19 @@
 
   <body>
 
+    <div class="header" style="padding-top: 20px;">
+      <div class="search" >
+      <button style="float: right; padding: 3px;">검색</button>
+       <input type="text" placeholder="검색어를 입력해주세요." style="display:inline-block; font-size:15px; padding:2px; float: right;">
+    </div>
+
+
     <div class="header">
       <h2 class="logo">Question Web</h2>
       <input type="checkbox" id="chk">
       <label for="chk" class="show-menu-btn">
         <i class="fa fa-ellipsis-h"></i>
       </label>
-
-
 
       <ul class="menu">
         <a href="index.php">Home</a>

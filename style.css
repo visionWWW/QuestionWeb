@@ -10,15 +10,16 @@
   color: #fff;
 }
 .logo{
-  line-height: 200px;
+  line-height: 100px;
   float: left;
   text-transform: uppercase;
 }
-
 .menu{
+  clear: right;
   float: right;
-  line-height: 200px;
+  line-height: 100px;
 }
+
 .menu a{
   color: #fff;
   text-transform: uppercase;
