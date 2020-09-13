@@ -14,9 +14,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Style.css">
   </head>
+  <style>
+    .form{
+      width: 1000px;
+    }
+    .form > div {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 7px;
+      align-items: center;
+    }
+    .menu{
+      clear: right;
+      float: right;
+      line-height: 100px;
+    }
+  </style>
   <body>
-
-    <div class="header">
+    <div class="header" style="padding-top: 20px;">
+      <div class="search" >
+        <form method="GET" action="search.php">
+          <input type="submit" value="검색" style="float: right; padding: 3px;">
+          <input type="text" name="keyword" placeholder="검색어를 입력해주세요." style="display:inline-block; font-size:15px; padding:2px; float: right;">
+        </form>
+    </div>
+   <div class="header">
       <h2 class="logo"><a href="index.php">Question Web</a></h2>
       <input type="checkbox" id="chk">
       <label for="chk" class="show-menu-btn">
@@ -41,13 +63,13 @@
         </label>
       </ul>
 
-
+</div>
     </div>
 <button type="button" onclick="location.href='ask.php'" style="float: right;">글쓰기</button>
 <br><br><br>
-<h3 style="margin-left:30px">QUESTION</h3>
+<h3 style="margin-left:30px;color:black;">QUESTION</h3>
     <div class="content">
-      <table border="1">
+      <table border="1" style="color:black;">
         <thead align="center">
           <tr>
             <td width="50">번호</td>
