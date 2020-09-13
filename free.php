@@ -14,7 +14,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Style.css">
   </head>
+  <style>
+    .form{
+      width: 1000px;
+    }
+    .form > div {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 7px;
+      align-items: center;
+    }
+    .menu{
+      clear: right;
+      float: right;
+      line-height: 100px;
+    }
+  </style>
+
   <body>
+    <div class="header" style="padding-top: 20px;">
+      <div class="search" >
+      <button style="float: right; padding: 3px;">검색</button>
+       <input type="text" placeholder="검색어를 입력해주세요." style="display:inline-block; font-size:15px; padding:2px; float: right;">
+    </div>
 
     <div class="header">
       <h2 class="logo"><a href="index.php">Question Web</a></h2>
