@@ -24,7 +24,13 @@
     <link rel="stylesheet" href="Style.css">
   </head>
   <body>
-
+    <div class="header" style="padding-top: 20px;">
+      <div class="search" >
+        <form method="GET" action="search.php">
+          <input type="submit" value="검색" style="float: right; padding: 3px;">
+          <input type="text" name="keyword" placeholder="검색어를 입력해주세요." style="display:inline-block; font-size:15px; padding:2px; float: right;">
+        </form>
+    </div>
     <div class="header">
       <h2 class="logo"><a href="index.html">Question Web</a></h2>
       <input type="checkbox" id="chk">
@@ -51,7 +57,7 @@
         </label>
       </ul>
 
-
+      </div>
     </div>
 <br><br><br>
     <div class="content">
